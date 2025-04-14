@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Book List</title>
+</head>
+
+<body>
+    <h2>Books</h2>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Status</th>
+        </tr>
+        {% for book in books %}
+        <tr>
+            <td>{{ book[0] }}</td>
+            <td>{{ book[1] }}</td>
+            <td>{{ book[2] }}</td>
+            <td>{{ book[3] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <p><a href="/">Add another book</a></p>
+    <p><a href="http://localhost:5002">Go to Rentals</a> | <a href="http://localhost:5505">Back to Dashboard</a></p>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Rental List</title>
+</head>
+
+<body>
+    <h2>Your Rentals - {{ user_name }}</h2>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Book ID</th>
+            <th>Rental Date</th>
+            <th>Return Date</th>
+        </tr>
+        {% for rental in rentals %}
+        <tr>
+            <td>{{ rental[0] }}</td>
+            <td>{{ rental[2] }}</td>
+            <td>{{ rental[3] }}</td>
+            <td>{{ rental[4] or 'Not Returned' }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <p><a href="/">Rent another book</a></p>
+    <p><a href="http://localhost:5001">Go to Books</a> | <a href="http://localhost:5505">Back to Dashboard</a></p>
+</body>
+
+</html>
